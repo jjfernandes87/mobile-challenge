@@ -96,7 +96,8 @@ private extension LightningUseCaseTests {
             channels: 2908,
             capacity: 36010516297,
             firstSeen: 1522941222,
-            updatedAt: 1661274935
+            updatedAt: 1661274935,
+            country: ["pt-BR": "EUA"]
         )
     }
     
@@ -108,7 +109,8 @@ private extension LightningUseCaseTests {
             "channels": node.channels,
             "capacity": node.capacity,
             "firstSeen": node.firstSeen,
-            "updatedAt": node.updatedAt
+            "updatedAt": node.updatedAt,
+            "country": node.country
         ]
         
         return (node, json)

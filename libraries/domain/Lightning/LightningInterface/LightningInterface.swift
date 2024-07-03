@@ -43,6 +43,8 @@ public struct Nodes: Equatable, Codable {
     public let capacity: Int
     public let firstSeen: Int
     public let updatedAt: Int
+    public let city: [String: String]?
+    public let country: [String: String]
     
     public init(
         publicKey: String,
@@ -50,7 +52,9 @@ public struct Nodes: Equatable, Codable {
         channels: Int,
         capacity: Int,
         firstSeen: Int,
-        updatedAt: Int
+        updatedAt: Int,
+        city: [String: String]? = nil,
+        country: [String: String]
     ) {
         self.publicKey = publicKey
         self.alias = alias
@@ -58,6 +62,8 @@ public struct Nodes: Equatable, Codable {
         self.capacity = capacity
         self.firstSeen = firstSeen
         self.updatedAt = updatedAt
+        self.city = city
+        self.country = country
     }
     
     public static func == (lhs: Nodes, rhs: Nodes) -> Bool {

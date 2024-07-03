@@ -26,6 +26,7 @@ The project folder structure is as follows:
     └── xcodegen
 └── libraries
     ├── core
+        ├── DependencyInjector
     ├── domain
     └── ui
 └── apps

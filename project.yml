@@ -9,3 +9,5 @@ include:
   relativePaths: false
 - path: libraries/core/NetworkClient/project.yml
   relativePaths: false
+- path: libraries/domain/Lightning/project.yml
+  relativePaths: false

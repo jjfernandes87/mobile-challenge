@@ -1,0 +1,54 @@
+############
+# Targets
+############
+
+targets:
+
+  LightningInterface:
+    
+    # templates
+    templates:
+      - StaticFramework
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: libraries/domain/Lightning
+    
+  Lightning:
+    
+    # templates
+    templates:
+      - StaticFramework
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: libraries/domain/Lightning
+    
+    dependencies:
+     - target: DependencyInjector
+     - target: NetworkClient
+     - target: LightningInterface
+      
+    # scheme
+    scheme:
+      gatherCoverageData: true
+      coverageTargets:
+        - Lightning
+      testTargets:
+        - name: LightningTests
+          parallelizable: true
+          randomExecutionOrder: true
+
+  LightningTests:
+    
+    # templates
+    templates:
+      - FrameworkTests
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: libraries/domain/Lightning
+
+    # dependencies
+    dependencies:
+      - target: Lightning

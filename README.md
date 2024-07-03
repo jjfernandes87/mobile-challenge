@@ -29,6 +29,7 @@ The project folder structure is as follows:
         ├── DependencyInjector
         ├── NetworkClient
     ├── domain
+        ├── Lightning
     └── ui
 └── apps
     └── iOS
@@ -62,3 +63,4 @@ Dependency injection (DI) is a software design pattern that implements Inversion
 
 - **Dependency Injection:** hat works as a wrapper for the Swinject External Lib, the object here is to create an easy and reusable standard DI lib that can be used by the entire application;
 - **NetworkClient**: A standard HTTP client service that uses URLSession as a native framework;
+- **Lightning:** responsible for the business rule

@@ -26,6 +26,7 @@ The project folder structure is as follows:
     └── xcodegen
 └── libraries
     ├── core
+        ├── DependencyInjector
     ├── domain
     └── ui
 └── apps
@@ -50,3 +51,8 @@ The project folder structure is as follows:
   - **ui**: User interface components.
 - **apps**: Directory containing the main application:
   - **iOS**: Main iOS application.
+
+## iOS External framework
+
+- **Swinject**: is a lightweight dependency injection framework for Swift.
+Dependency injection (DI) is a software design pattern that implements Inversion of Control (IoC) for resolving dependencies. In the pattern, Swinject helps your app split into loosely-coupled components, which can be developed, tested and maintained more easily. Swinject is powered by the Swift generic type system and first class functions to define dependencies of your app simply and fluently.

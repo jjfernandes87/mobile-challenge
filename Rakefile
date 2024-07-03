@@ -20,6 +20,6 @@ namespace :xcode do
     task :generate do
         sh "killall Xcode || true"
         sh "xcodegen generate && pod install"
-        sh "open Trainer.xcworkspace"
+        sh "open Challenge.xcworkspace"
     end
 end

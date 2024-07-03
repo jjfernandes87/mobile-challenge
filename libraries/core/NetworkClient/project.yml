@@ -1,0 +1,53 @@
+############
+# Targets
+############
+
+targets:
+
+  NetworkClientInterface:
+    
+    # templates
+    templates:
+      - StaticFramework
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: libraries/core/NetworkClient
+    
+  NetworkClient:
+    
+    # templates
+    templates:
+      - StaticFramework
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: libraries/core/NetworkClient
+    
+    dependencies:
+     - target: DependencyInjector
+     - target: NetworkClientInterface
+      
+    # scheme
+    scheme:
+      gatherCoverageData: true
+      coverageTargets:
+        - NetworkClient
+      testTargets:
+        - name: NetworkClientTests
+          parallelizable: true
+          randomExecutionOrder: true
+
+  NetworkClientTests:
+    
+    # templates
+    templates:
+      - FrameworkTests
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: libraries/core/NetworkClient
+
+    # dependencies
+    dependencies:
+      - target: NetworkClient

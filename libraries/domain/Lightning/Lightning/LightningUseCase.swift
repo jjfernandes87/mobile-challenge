@@ -12,7 +12,9 @@ final class LightningUseCase {
     }
     
     static func successfullyValidation(_ data: Data, response: HTTPURLResponse) -> NodesResult {
-        guard response.statusCode == 200, let nodes = try? JSONDecoder().decode([Nodes].self, from: data) else {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        guard response.statusCode == 200, let nodes = try? decoder.decode([Nodes].self, from: data) else {
             return  .failure(.invalidData)
         }
         return .success(nodes)

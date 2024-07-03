@@ -40,9 +40,9 @@ public struct Nodes: Equatable, Codable {
     public let publicKey: String
     public let alias: String
     public let channels: Int
-    public let capacity: Int
-    public let firstSeen: Int
-    public let updatedAt: Int
+    public let capacity: Int64
+    public let firstSeen: Date
+    public let updatedAt: Date
     public let city: [String: String]?
     public let country: [String: String]
     
@@ -50,9 +50,9 @@ public struct Nodes: Equatable, Codable {
         publicKey: String,
         alias: String,
         channels: Int,
-        capacity: Int,
-        firstSeen: Int,
-        updatedAt: Int,
+        capacity: Int64,
+        firstSeen: Date,
+        updatedAt: Date,
         city: [String: String]? = nil,
         country: [String: String]
     ) {

@@ -95,8 +95,8 @@ private extension LightningUseCaseTests {
             alias: "alias",
             channels: 2908,
             capacity: 36010516297,
-            firstSeen: 1522941222,
-            updatedAt: 1661274935,
+            firstSeen: Date(timeIntervalSince1970: 1720033718),
+            updatedAt: Date(timeIntervalSince1970: 1720033718),
             country: ["pt-BR": "EUA"]
         )
     }
@@ -108,8 +108,8 @@ private extension LightningUseCaseTests {
             "alias": node.alias,
             "channels": node.channels,
             "capacity": node.capacity,
-            "firstSeen": node.firstSeen,
-            "updatedAt": node.updatedAt,
+            "firstSeen": node.firstSeen.timeIntervalSince1970,
+            "updatedAt": node.updatedAt.timeIntervalSince1970,
             "country": node.country
         ]
         

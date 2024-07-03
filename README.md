@@ -27,6 +27,7 @@ The project folder structure is as follows:
 └── libraries
     ├── core
         ├── DependencyInjector
+        ├── NetworkClient
     ├── domain
     └── ui
 └── apps
@@ -56,3 +57,8 @@ The project folder structure is as follows:
 
 - **Swinject**: is a lightweight dependency injection framework for Swift.
 Dependency injection (DI) is a software design pattern that implements Inversion of Control (IoC) for resolving dependencies. In the pattern, Swinject helps your app split into loosely-coupled components, which can be developed, tested and maintained more easily. Swinject is powered by the Swift generic type system and first class functions to define dependencies of your app simply and fluently.
+
+## Internal modules 
+
+- **Dependency Injection:** hat works as a wrapper for the Swinject External Lib, the object here is to create an easy and reusable standard DI lib that can be used by the entire application;
+- **NetworkClient**: A standard HTTP client service that uses URLSession as a native framework;

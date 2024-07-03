@@ -24,7 +24,7 @@ final class LightningUseCase {
 extension LightningUseCase: LightningInterface {
     func fetchNodes(completion: @escaping (NodesResult) -> Void) {
         guard let url = baseURL else {
-            completion(.failure(.invalidURL))
+            completion(.failure(.invalidURL(baseURL)))
             return
         }
         

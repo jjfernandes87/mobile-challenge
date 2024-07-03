@@ -1,5 +1,4 @@
 import Foundation
-import DependencyInjector
 
 public final class NetworkClientSpy: NetworkClient {
     

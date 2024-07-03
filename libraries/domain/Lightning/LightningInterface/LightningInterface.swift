@@ -1,9 +1,17 @@
 import Foundation
 
 public enum NodesError: Error {
-    case invalidURL
+    case invalidURL(URL?)
     case connectivity
     case invalidData
+    
+    public func message() -> String {
+        switch self {
+        case let .invalidURL(url): return "Invalid URL: \(url?.absoluteString ?? "url is empty")"
+        case .connectivity: return "Connectivity error"
+        case .invalidData: return "Unable to encode"
+        }
+    }
 }
 
 /**
@@ -44,7 +52,7 @@ public struct Nodes: Equatable, Codable {
     public let firstSeen: Date
     public let updatedAt: Date
     public let city: [String: String]?
-    public let country: [String: String]
+    public let country: [String: String]?
     
     public init(
         publicKey: String,
@@ -54,7 +62,7 @@ public struct Nodes: Equatable, Codable {
         firstSeen: Date,
         updatedAt: Date,
         city: [String: String]? = nil,
-        country: [String: String]
+        country: [String: String]? = nil
     ) {
         self.publicKey = publicKey
         self.alias = alias

@@ -20,10 +20,10 @@ The project folder structure is as follows:
 ├── Podfile
 ├── Gemfile
 ├── scripts
-│   ├── podfile
-│   ├── rakefile
-│   ├── spm
-│   └── xcodegen
+    ├── podfile
+    ├── rakefile
+    ├── spm
+    └── xcodegen
 └── libraries
     ├── core
     ├── domain

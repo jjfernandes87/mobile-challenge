@@ -1,6 +1,6 @@
 import Foundation
 
-public enum NodesError: Error {
+public enum NodesError: Error, Equatable {
     case invalidURL(URL?)
     case connectivity
     case invalidData

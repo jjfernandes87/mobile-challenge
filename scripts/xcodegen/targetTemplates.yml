@@ -25,9 +25,6 @@ targetTemplates:
     type: bundle.unit-test
     sources:
     - path: "${frameworkPath}/${target_name}"
-      excludes:
-      - __Snapshots__
-      - "**/__Snapshots__"
     info:
       path: "${frameworkPath}/${target_name}/Info.plist"
   
@@ -56,8 +53,5 @@ targetTemplates:
     type: bundle.unit-test
     sources: 
       - path: "${frameworkPath}/${target_name}"
-        excludes:
-          - "__Snapshots__"
-          - "**/__Snapshots__"
     info:
       path: "${frameworkPath}/${target_name}/Info.plist"

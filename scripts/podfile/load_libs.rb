@@ -30,3 +30,14 @@ def Lightning
         end
     end
 end
+
+def Challenge
+    target 'Challenge' do
+        # Libs bundled outside
+        dependency_injector_pods
+    
+        target 'ChallengeTests' do
+            
+        end
+    end
+end

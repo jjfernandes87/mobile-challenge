@@ -1,0 +1,44 @@
+############
+# Targets
+############
+
+targets:
+
+  Challenge:
+    
+    # templates
+    templates:
+      - iOSApp
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: apps/Challenge
+    
+    dependencies:
+     - target: DependencyInjector
+     - target: NetworkClient
+     - target: Lightning
+      
+    # scheme
+    scheme:
+      gatherCoverageData: true
+      coverageTargets:
+        - Challenge
+      testTargets:
+        - name: ChallengeTests
+          parallelizable: true
+          randomExecutionOrder: true
+
+  ChallengeTests:
+    
+    # templates
+    templates:
+      - iOSAppTests
+    
+    # templateAttributes
+    templateAttributes:
+      frameworkPath: apps/Challenge
+
+    # dependencies
+    dependencies:
+      - target: Challenge

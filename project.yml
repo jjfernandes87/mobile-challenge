@@ -11,3 +11,5 @@ include:
   relativePaths: false
 - path: libraries/domain/Lightning/project.yml
   relativePaths: false
+- path: apps/Challenge/project.yml
+  relativePaths: false

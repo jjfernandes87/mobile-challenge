@@ -15,6 +15,7 @@ load './scripts/podfile/load_libs.rb'
 DependencyInjector()
 NetworkClient()
 Lightning()
+Challenge()
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
